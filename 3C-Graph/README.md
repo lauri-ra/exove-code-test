@@ -29,15 +29,23 @@ When it comes to the actual implementation I went with **Depth-First Search (DFS
 ## Practical implementation (two main functions)
 
 ### createGraph 
-This function creates a graph from the given nodes and paths. The graph is implemented as an adjacency list where the keys are individual nodes and values their children. This is done with JavaScript Map. **The amount of nodes is calculated from the size of the created graph**.
-
 ```
 function createGraph(nodes: number[], paths: number[][]): Map<number, number[]>
 ```
+This function creates a graph from the given nodes and paths/edges. The graph is implemented as an adjacency list where the keys are individual nodes and values their immidiate children. This is done with Map object, since it has useful functions for the DFS implementation and the datastructure fit the graph model well. This an example how the created graph looks like.
+```
+Map(5) {
+  1 => [ 2 ],
+  2 => [ 1, 3, 4, 5 ],
+  3 => [ 2 ],
+  4 => [ 2, 5 ],
+  5 => [ 4, 2 ]
+}
+```
+
+**The amount of nodes is calculated from the size of the created graph**.
 
 ### hasCycle
-This is the DFS implementation and **finds wether the graph has a cycle or not**. The function takes a graph and a starting node as parameters. It also intializes a set to keep track of visited nodes, and parent node to keep track of where we are coming from.
-
 ```
 function hasCycle(
 	graph: Map<number, number[]>,
@@ -46,6 +54,8 @@ function hasCycle(
 	parent: number = null
 ): boolean 
 ```
+This is the DFS implementation and **finds wether the graph has a cycle or not**. The function takes a graph and a starting node as parameters. It also intializes a set to keep track of visited nodes, and parent node to keep track of where we are coming from.
+
 
 In short the steps are these:
 1. Add node to visited list
