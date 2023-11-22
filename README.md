@@ -8,6 +8,8 @@ You can start by cloning the repo:
 git clone https://github.com/lauri-ra/exove-code-test.git
 ```
 
+Then navigate to each tasks folder to run the respective task solution
+
 ### 1C) Create a slider in React
 [Solution](https://github.com/lauri-ra/exove-code-test/tree/main/1C-React-Slider)
 
