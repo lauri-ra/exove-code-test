@@ -3,10 +3,10 @@ Write a program that counts the number of nodes in a non-directional graph and f
 
 # Task setup & prerequisites
 
-Make sure you have node installed. If TypeScript is not already installed, you can do so by running the command:
+Make sure you have node installed. Then run
 
 ```
-npm install typescript --save-dev
+npm install
 ```
 
 Then compile the project 
